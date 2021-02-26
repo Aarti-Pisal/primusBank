@@ -167,7 +167,7 @@ public static Hashtable<String,Object> outputParameters=new Hashtable<String,Obj
 		   System.out.println("Test Case Fail");
 	   }
 	   
-	   outputParameters.put("STATUS", "FAIL");
+	   outputParameters.put("STATUS", "PASS");
   	 outputParameters.put("MESSAGE", "Action:Validation, Input Given: "+ inputParameters[0].toString());
 	  }
 	  catch (Exception e)

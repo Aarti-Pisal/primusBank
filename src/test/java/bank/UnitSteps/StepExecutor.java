@@ -73,5 +73,26 @@ public class StepExecutor
 	     input11[0]="//*[text()='Branch Details']";
 	     input11[1]="Branch Details";
 	     SeleniumOperations.validation(input11);
+	     
+	     //Click On Log Out
+	     Object[] input12=new Object[1];
+	     input12[0]="//*[@src='images/admin_but_03.jpg']";
+	     SeleniumOperations.click(input12);
+	     
+	     //Click on Personal Login
+	     Object[] input13=new Object[1];
+	     input13[0]="//*[@id='personal']";
+	     SeleniumOperations.click(input13);
+	     
+	     //Click on Customer Service
+	     Object[] input14=new Object[1];
+	     input14[0]="//*[@href='customerServices.html']";
+	     SeleniumOperations.click(input14);
+	     
+	     //Validation For Contact number
+	     Object[] input15=new Object[2];
+	     input15[0]="//*[text()='08082324252']";
+	     input15[1]="08082324252";
+	     SeleniumOperations.validation(input15);
 }
 }

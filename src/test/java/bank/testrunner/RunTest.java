@@ -12,23 +12,10 @@ import cucumber.api.junit.Cucumber;
                     (
                        plugin="pretty",
 		               features="src/test/resources/BUSINESS_LOGIC/CUCUMBER_SUITES",
-		               tags="@SmokeTest",
+		               tags="@SmokeTest,@RegressionTest",
 		               glue="bank.cucumbermap",
 		               monochrome=true
-		
-                      )
-
-
-
-
-
-
-
-
-
-
-
-
+		            )
 
 
 

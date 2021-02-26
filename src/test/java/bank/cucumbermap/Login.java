@@ -23,8 +23,8 @@ public void user_opens_browser_with_exe(String bname, String epath) throws Throw
 public void user_enters_url(String url) throws Throwable 
 {
 	  Object[] input1=new Object[1];
-	     input1[0]=url;
-	     SeleniumOperations.applicationLaunch(input1);
+	  input1[0]=url;
+	  SeleniumOperations.applicationLaunch(input1);
 }
 
 @When("^user enters \"([^\"]*)\" as username$")
@@ -34,7 +34,6 @@ public void user_enters_as_username(String uname) throws Throwable
      input2[0]="//*[@id='txtuId']";
      input2[1]=uname;
      Hashtable<String, Object> input2op=SeleniumOperations.sendKey(input2);  
-     
      HTMLReportGenerator.StepDetails(input2op.get("STATUS").toString(), "user enters \"([^\"]*)\" as username", input2op.get("MESSAGE").toString());
 }
 
@@ -44,8 +43,7 @@ public void user_enters_as_password(String pass) throws Throwable
 	 Object[] input3=new Object[2];
      input3[0]="//*[@id='txtPword']";
      input3[1]=pass;
- Hashtable<String, Object> input3op=SeleniumOperations.sendKey(input3);  
-     
+     Hashtable<String, Object> input3op=SeleniumOperations.sendKey(input3);  
      HTMLReportGenerator.StepDetails(input3op.get("STATUS").toString(), "user enters \"([^\"]*)\" as password", input3op.get("MESSAGE").toString());
 }
 
@@ -54,8 +52,7 @@ public void user_click_on_login_button() throws Throwable
 {
 	 Object[] input4=new Object[1];
      input4[0]="//*[@id='login']";
- Hashtable<String, Object> input4op=SeleniumOperations.click(input4);  
-     
+     Hashtable<String, Object> input4op=SeleniumOperations.click(input4);  
      HTMLReportGenerator.StepDetails(input4op.get("STATUS").toString(), "user click on login button", input4op.get("MESSAGE").toString());
 }
 
@@ -65,9 +62,8 @@ public void user_is_on_page_and_get_msg(String msg) throws Throwable
 	 Object[] input10=new Object[2];
      input10[0]="//*[text()='Admin']";
      input10[1]=msg;
-Hashtable<String, Object> input10op=SeleniumOperations.validation(input10);  
-     
-     HTMLReportGenerator.StepDetails(input10op.get("STATUS").toString(), "user click on login button", input10op.get("MESSAGE").toString());
+     Hashtable<String, Object> input10op=SeleniumOperations.validation(input10);  
+     HTMLReportGenerator.StepDetails(input10op.get("STATUS").toString(), "user is on \"([^\"]*)\" page and get msg", input10op.get("MESSAGE").toString());
 }
 
 
